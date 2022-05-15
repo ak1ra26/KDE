@@ -1,0 +1,4 @@
+#!/bin/bash -i
+set +o history # исключает запись в историю при bash -i.
+# При отмене или завершении скрипта включает историю.
+trap "set -o history" INT TERM EXIT
